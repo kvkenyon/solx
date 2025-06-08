@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Noto_Sans } from "next/font/google";
+import { DM_Sans, DM_Mono } from "next/font/google";
+
 import "./globals.css";
-import ConvexClientProvider from "@/components/ConvexClientProvider";
+import ConvexClientProvider from "@/components/convex-client-provider";
 import { ClerkProvider } from "@clerk/nextjs";
 import {
 	SidebarProvider,
@@ -13,14 +14,16 @@ import { cookies } from "next/headers";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/theme-toggle";
 
-const notoSans = Noto_Sans({
-	variable: "--font-noto-sans",
+const dmSans = DM_Sans({
+	variable: "--font-sans",
 	subsets: ["latin"],
+	weight: ["300", "400", "500"],
 });
 
-const notoSansMono = Noto_Sans({
-	variable: "--font-noto-sans",
+const dmMono = DM_Mono({
+	variable: "--font-mono",
 	subsets: ["latin"],
+	weight: ["300", "400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -40,10 +43,12 @@ export default async function RootLayout({
 	const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
 
 	return (
-		<html lang="en" suppressHydrationWarning>
-			<body
-				className={`${notoSans.variable} ${notoSansMono.variable} antialiased`}
-			>
+		<html
+			lang="en"
+			suppressHydrationWarning
+			className={`${dmSans.variable} ${dmMono.variable}`}
+		>
+			<body className="antialiased">
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="system"
@@ -55,7 +60,7 @@ export default async function RootLayout({
 							<SidebarProvider defaultOpen={defaultOpen}>
 								<AppSidebar />
 								<SidebarInset>
-									<main className="flex flex-col h-screen">
+									<main className="flex flex-col">
 										<div className="flex flex-row justify-between items-center ">
 											<SidebarTrigger />
 											<ModeToggle />
