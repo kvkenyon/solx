@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, DM_Mono } from "next/font/google";
 
-import "./globals.css";
+import "../globals.css";
 import ConvexClientProvider from "@/components/convex-client-provider";
 import { ClerkProvider } from "@clerk/nextjs";
 import {
