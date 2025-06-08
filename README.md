@@ -1,51 +1,62 @@
-# Welcome to your Convex + Next.js + Clerk app
+# SolX: Fast Iteration Template
 
-This is a [Convex](https://convex.dev/) project created with [`npm create convex`](https://www.npmjs.com/package/create-convex).
+SolX is a modern template designed for rapid prototyping and fast iteration with a robust full-stack setup. Built for developers who want to move quickly from idea to production, SolX combines the best tools for speed, flexibility, and maintainability.
 
-After the initial setup (<2 minutes) you'll have a working full-stack app using:
+## Tech Stack
 
-- Convex as your backend (database, server logic)
-- [React](https://react.dev/) as your frontend (web page interactivity)
-- [Next.js](https://nextjs.org/) for optimized web hosting and page routing
-- [Tailwind](https://tailwindcss.com/) for building great looking accessible UI
-- [Clerk](https://clerk.com/) for authentication
+- **Convex**: Realtime backend (database, server logic)
+- **Next.js**: Optimized web hosting and routing
+- **React**: Interactive UI
+- **Tailwind CSS**: Modern, accessible styling
+- **shadcn/ui CLI**: Component scaffolding and UI primitives
+- **Clerk**: Authentication (swap for your preferred provider)
 
-## Get started
+## Why SolX?
 
-If you just cloned this codebase and didn't use `npm create convex`, run:
+- **Rapid Prototyping**: Start building features immediately—no boilerplate setup required.
+- **Modern Best Practices**: Pre-configured with TypeScript, Tailwind, shadcn/ui, and scalable file structure.
+- **Flexible Auth**: Clerk is included by default, but you can easily swap in your own provider.
+- **Production Ready**: Optimized for performance, security, and maintainability.
 
+## Getting Started
+
+### Bootstrap a New Project
+
+You can create a new project using this template with:
+
+```bash
+npx create-next-app --example https://github.com/kvkenyon/solx <your-app-name>
 ```
-npm install
-npm run dev
-```
 
-If you're reading this README on GitHub and want to use this template, run:
+### Local Development
 
-```
-npm create convex@latest -- -t nextjs-clerk
-```
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+2. **Start the dev server:**
+   ```bash
+   npm run dev
+   ```
+3. **Iterate fast:**
+   - Add your features in `app/`, `components/`, and `convex/`.
+   - Use Tailwind for styling and Convex for backend logic.
+   - Scaffold and customize UI components with the shadcn/ui CLI.
+   - Swap out auth or other integrations as needed.
 
-Then:
+## Learn More
 
-1. Open your app. There should be a "Claim your application" button from Clerk in the bottom right of your app.
-2. Follow the steps to claim your application and link it to this app.
-3. Follow step 3 in the [Convex Clerk onboarding guide](https://docs.convex.dev/auth/clerk#get-started) to create a Convex JWT template.
-4. Uncomment the Clerk provider in `convex/auth.config.ts`
-5. Paste the Issuer URL as `CLERK_JWT_ISSUER_DOMAIN` to your dev deployment environment variable settings on the Convex dashboard (see [docs](https://docs.convex.dev/auth/clerk#configuring-dev-and-prod-instances))
+- [Convex Docs](https://docs.convex.dev/)
+- [Next.js Docs](https://nextjs.org/docs)
+- [Tailwind CSS Docs](https://tailwindcss.com/docs)
+- [shadcn/ui Docs](https://ui.shadcn.com/docs)
+- [Clerk Docs](https://clerk.com/docs)
 
-If you want to sync Clerk user data via webhooks, check out this [example repo](https://github.com/thomasballinger/convex-clerk-users-table/).
+## Community & Support
 
-## Learn more
+- [Convex Discord](https://convex.dev/community)
+- [Convex GitHub](https://github.com/get-convex/)
 
-To learn more about developing your project with Convex, check out:
+---
 
-- The [Tour of Convex](https://docs.convex.dev/get-started) for a thorough introduction to Convex principles.
-- The rest of [Convex docs](https://docs.convex.dev/) to learn about all Convex features.
-- [Stack](https://stack.convex.dev/) for in-depth articles on advanced topics.
-
-## Join the community
-
-Join thousands of developers building full-stack apps with Convex:
-
-- Join the [Convex Discord community](https://convex.dev/community) to get help in real-time.
-- Follow [Convex on GitHub](https://github.com/get-convex/), star and contribute to the open-source implementation of Convex.
+**SolX is your starting point for building, testing, and shipping full-stack apps—fast.**

@@ -17,7 +17,6 @@ import { ModeToggle } from "@/components/theme-toggle";
 const dmSans = DM_Sans({
 	variable: "--font-sans",
 	subsets: ["latin"],
-	weight: ["300", "400", "500"],
 });
 
 const dmMono = DM_Mono({
